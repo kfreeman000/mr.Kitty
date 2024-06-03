@@ -4,7 +4,7 @@ from openai import OpenAI
 
 app = Flask(__name__)
 a_list = []
-api_key = ""
+api_key = "sk-proj-pC1DVxmgYcKbMMiKqxNAT3BlbkFJ9nlSFGjIhvTu0S1i9wmy"
 client = OpenAI(api_key=api_key)
 
 
