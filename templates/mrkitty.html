@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <link href="../static/mrkitty.css" rel="stylesheet">
+    <script src="../static/mrkitty.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Mr Kitty</title>
+</head>
+<body>
+<header>
+    <div id="center">
+        <strong><h1>Mr. Kitty</h1></strong>
+        <strong><h2>music, facts, and more</h2></strong>
+    </div>
+    <div id="nav-container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href ="/music">Music</a></li>
+                <li><a href="/engage">Engage</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="home">
+
+    <div id="slideshow-container">
+        <div class="mySlides">
+            <img src="../static/image1.jpg" alt="bright red album cover">
+        </div>
+        <div class="mySlides">
+            <img src="../static/image2.jpg" alt="cat in a hoodie with white background album cover">
+        </div>
+        <div class="mySlides">
+            <img src="../static/image3.jpg" alt="spiritual entity album cover">
+        </div>
+    </div>
+    <div id="home-container">
+        <h2>
+            Welcome to the Mr. Kitty website. <br>
+            We welcome everyone! <br>
+            Poke around, tell us your favorite songs, <br>
+            and leave us a suggestion! <br>
+            Check out our NEW chatbot &#11015;
+        </h2>
+    </div>
+</div>
+<div class="chatbot">
+    <label for="userInput"></label><input type="text" id="userInput" placeholder="Chat with SmartKit">
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<div class="video">
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/N4e7jaDhD3g?si=c_0XhOmbphMd32IU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div id="a_list">
+    {% for comment in a_list %}
+    <p class="comment">{{ comment }}</p>     // this doesn't work atm but wanting to work on it
+    {% endfor %}
+</div>
+
+<footer>
+    <div id="footer-container">
+        <div id="copyright">
+            &copy; 2023 Mr.Kitty Unofficial Site. All rights reserved.
+        </div>
+        <div id="contact-info">
+            Contact: Kat Freeman | Phone: (207) 593-6552
+        </div>
+    </div>
+</footer>

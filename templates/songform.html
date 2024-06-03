@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="../static/mrkitty.css" rel="stylesheet">
+    <script src="../static/mrkitty.js" defer></script>
+    <link href="../main.py"
+
+<body>
+<div id="form">
+<h2> Tell us your favorite song:</h2>
+
+<form action="/submission" method="post">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+
+    
+    <br>
+
+
+    <br>
+    <div id="song-option">
+
+        <input type="radio" id="activity1" name="song" value="After Dark" >
+        <label for="activity1">After Dark</label>
+
+        <input type="radio" id="activity2" name="song" value="Habits" >
+        <label for="activity2">Habits</label>
+
+        <input type="radio" id="activity3" name="song" value="From Liquid" >
+        <label for="activity3">From Liquid</label>
+
+        <textarea id="comments" name="comments" placeholder="better song you don't see listed?"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+</div>
+</body>
+</html>

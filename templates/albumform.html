@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link href="../static/mrkitty.css" rel="stylesheet">
+    <script src="../static/mrkitty.js" defer></script>
+
+<body>
+    <div id="form">
+<h2> Tell us your favorite album:</h2>
+<br>
+<form action="/submission" method="post">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    
+    <br>    
+
+    <br>
+
+    <input type="radio" id="activity1" name="album" value="Ephemeral" >
+    <label for="activity1">Ephemeral</label>
+
+    <input type="radio" id="activity2" name="album" value="Time" >
+    <label for="activity2">Time</label>
+
+    <input type="radio" id="activity3" name="album" value="A.I." >
+    <label for="activity3">A.I.</label>
+
+    <textarea id="comments" name="comments" placeholder="better album you don't see listed?"></textarea>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

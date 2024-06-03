@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="../static/mrkitty.css" rel="stylesheet">
+    <script src="../static/mrkitty.js" defer></script>
+    <link href="../main.py"
+<body>
+<div id="form">
+    <h2>Apply to join our social club!</h2>
+
+    <form action="/submission" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" >
+        
+        <br>
+    
+
+    
+        
+    
+        <label for="age">How old are you?</label>
+        <input type="number" id="age" name="age" value="age" >
+
+        <br>
+        <br>
+
+        <label for="loc">Where are you from?</label>
+        <input type="text" id="loc" name="loc" value="" >
+
+    
+        <textarea id="comments" name="comments" placeholder="Tell us about you!"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+    
+</html>
