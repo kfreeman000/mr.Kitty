@@ -47,9 +47,20 @@
     </div>
 </div>
 <div class="chatbot">
-    <label for="userInput"></label><input type="text" id="userInput" placeholder="Chat with SmartKit">
+    <div id="chat-messages"></div>
+    <label for="userInput"></label>
+    <textarea id="userInput" placeholder="Chat with SmartKitty" rows="1"></textarea>
     <button onclick="sendMessage()">Send</button>
 </div>
+
+<script>
+    const textarea = document.getElementById('userInput');
+
+    textarea.addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+    });
+</script>
 
 <div class="video">
     <iframe width="600" height="400" src="https://www.youtube.com/embed/N4e7jaDhD3g?si=c_0XhOmbphMd32IU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -67,7 +78,7 @@
             &copy; 2023 Mr.Kitty Unofficial Site. All rights reserved.
         </div>
         <div id="contact-info">
-            Contact: Kat Freeman | Phone: (207) 593-6552
+            Contact: Kat Freeman | Email: katjobs2025@gmail.com
         </div>
     </div>
 </footer>

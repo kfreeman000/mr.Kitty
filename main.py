@@ -84,9 +84,10 @@ def data():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)     # after code is stopped, a list of students with an IC
-    # email who submitted  form will print
+    app.run(debug=True)     
     ic_students = objects.SearchAndSort.search_for_ic_students()
     print(ic_students)
+    # after code is stopped, a list of students with an IC
+    # email who submitted  form will print
 
 

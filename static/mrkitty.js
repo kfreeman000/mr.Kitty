@@ -22,7 +22,7 @@ function showSlides() {
 
 function sendMessage() {
     var userInput = document.getElementById("userInput").value;
-    displayMessage("You: " + userInput);
+    displayMessage("You: " + userInput, "user-message"); // Add a class for user messages
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/", true);
@@ -30,10 +30,9 @@ function sendMessage() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                // Parse JSON response
                 var response = JSON.parse(xhr.responseText);
-                var botResponse = `Bot: ${response.bot_response}`;
-                displayMessage(botResponse);
+                var botResponse = `SmartKitty: ${response.bot_response}`;
+                displayMessage(botResponse, "bot-message"); // Add a class for bot messages
             } else {
                 console.error("Error:", xhr.statusText);
             }
@@ -42,14 +41,13 @@ function sendMessage() {
     xhr.send(JSON.stringify({ user_input: userInput }));
 
     document.getElementById("userInput").value = "";
+}
 
-
-        }
-function displayMessage(message) {
-            var chatbotContainer = document.querySelector(".chatbot");
-            var messageElement = document.createElement("div");
-            messageElement.classList.add("message");
-            messageElement.textContent = message;
-            chatbotContainer.appendChild(messageElement);
-            chatbotContainer.scrollTop = chatbotContainer.scrollHeight;
-        }
+function displayMessage(message, messageClass) {
+    var chatMessages = document.getElementById("chat-messages"); // Select the correct container
+    var messageElement = document.createElement("div");
+    messageElement.classList.add("message", messageClass); // Add message and user/bot class
+    messageElement.textContent = message;
+    chatMessages.appendChild(messageElement);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}

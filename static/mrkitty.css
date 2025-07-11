@@ -354,14 +354,39 @@ html {
     left: 300px;
     width: 300px;
     height: 400px;
-    border: 1px solid #ddd;
+    border: 10px solid black; /* Changed border color to black */
     margin-left: 700px;
     border-radius: 10px;
-    overflow-y: scroll;
+    overflow-y: auto; /* Added scrollbar */
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Added padding to make it look nicer */
 }
 
+#userInput {
+    width: calc(100% - 20px); /* Adjust width to account for padding/border */
+    resize: vertical;
+    overflow: auto;
+    border: 1px solid black;
+    margin-bottom: 10px; /* Add margin to separate from messages */
+}
+
+#chat-messages {
+    position: absolute;
+    top: 75px; /* Adjust top to be below the input box */
+    left: 10px;
+    right: 10px;
+    bottom: 80px;
+    height: 300;
+    text-align: right;
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-bottom: 10px; 
+}
+
+.chatbot button {
+    margin-top: 5px; /* Add margin to separate from input box */
+}
 
 .message {
     margin: 10px;
