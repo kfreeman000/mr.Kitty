@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+venv/
+.env/
+.vscode/
+.idea/
+.DS_Store
+node_modules/
+google-cloud-sdk/
