@@ -22,7 +22,8 @@ function showSlides() {
 
 function sendMessage() {
     var userInput = document.getElementById("userInput").value;
-    displayMessage("You: " + userInput, "user-message"); // Add a class for user messages
+    displayMessage("You: " + userInput, "user-message");
+
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/", true);
@@ -41,6 +42,8 @@ function sendMessage() {
     xhr.send(JSON.stringify({ user_input: userInput }));
 
     document.getElementById("userInput").value = "";
+    console.log("Sending:", userInput);
+
 }
 
 function displayMessage(message, messageClass) {

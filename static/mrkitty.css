@@ -320,9 +320,12 @@ html {
     padding: 10px;
     text-align: left;
     position: relative;
-    bottom: 0;
+    
+    
+    }
+    footer {
     width: 100%;
-  }
+    }
   
   #copyright,
   #contact-info {
@@ -357,35 +360,35 @@ html {
     border: 10px solid black; /* Changed border color to black */
     margin-left: 700px;
     border-radius: 10px;
-    overflow-y: auto; /* Added scrollbar */
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px; /* Added padding to make it look nicer */
 }
 
 #userInput {
-    width: calc(100% - 20px); /* Adjust width to account for padding/border */
+    width: calc(100% - 60px); /* Adjust width to account for padding/border */
     resize: vertical;
     overflow: auto;
     border: 1px solid black;
     margin-bottom: 10px; /* Add margin to separate from messages */
+    
 }
 
 #chat-messages {
     position: absolute;
-    top: 75px; /* Adjust top to be below the input box */
+    top: 75px;
     left: 10px;
     right: 10px;
-    bottom: 80px;
-    height: 300;
-    text-align: right;
+    height: 275px;
     overflow-y: auto;
-    flex-grow: 1;
-    margin-bottom: 10px; 
+    scroll-behavior: smooth;
+}
+#chat-messages:hover {
+    overflow-y: auto;
 }
 
 .chatbot button {
-    margin-top: 5px; /* Add margin to separate from input box */
+    position: absolute;
 }
 
 .message {
@@ -397,8 +400,9 @@ html {
 }
 
 .user-message {
-    text-align: right;
+    text-align: left;
     background-color: #b3e5fc;
+    
 }
 
 .bot-message {

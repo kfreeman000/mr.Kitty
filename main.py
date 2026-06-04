@@ -1,11 +1,12 @@
 from flask import Flask, request, render_template, jsonify
 import objects
 from openai import OpenAI
+import os
 
 app = Flask(__name__)
 a_list = []
-api_key = ""
-client = OpenAI(api_key=api_key)
+client = OpenAI(api_key=os.getenv("API_KEY"))
+
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -84,10 +85,14 @@ def data():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)     
+    # this runs BEFORE the server starts
     ic_students = objects.SearchAndSort.search_for_ic_students()
     print(ic_students)
+
+    app.run(debug=True)
+
     # after code is stopped, a list of students with an IC
     # email who submitted  form will print
+
 
 
